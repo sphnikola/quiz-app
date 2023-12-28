@@ -6,12 +6,19 @@ import acsb from "./assets/images/icon-accessibility.svg";
 function App() {
   return (
     <>
-      <section className=" min-h-screen">
+      <section className=" min-h-screen font-rubik">
         <div className=" max-w-7xl mx-auto px-[24px] lg:px-[64px]">
           <main className="grid lg:grid-cols-[repeat(2,1fr)] items-start">
             <section>
-              <h1>welcome to the frontend quiz!</h1>
-              <p>pick a subject to get started</p>
+              <h1 className=" text-[40px] leading-[40px] md:text-[64px] md:leading-[64px] font-light">
+                welcome to the
+                <br /> <span className="f font-medium">
+                  frontend quiz!
+                </span>{" "}
+              </h1>
+              <p className="text-[14px] leading-[21px] italic font-light md:text-[20px] md:leading-[30px]">
+                pick a subject to get started!
+              </p>
             </section>
             <section>
               <ul>

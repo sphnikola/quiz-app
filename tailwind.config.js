@@ -7,6 +7,9 @@ export default {
         md: "768px",
         lg: "1200px",
       },
+      fontFamily: {
+        rubik: ["Rubik", "sans-serif"],
+      },
     },
   },
   plugins: [],
