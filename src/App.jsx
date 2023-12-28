@@ -18,7 +18,7 @@ function App() {
                 <li>
                   <a className="flex items-center">
                     <div>
-                      <img src={html} />
+                      <img src={html} className="w-[28px]" />
                     </div>
                     <div>
                       <h2>html</h2>
@@ -27,26 +27,32 @@ function App() {
                 </li>
                 <li>
                   <a className="flex items-center">
-                    <img src={html} />
-                    <span>
+                    <div>
+                      <img src={html} className="w-[28px]" />
+                    </div>
+                    <div>
                       <h2>html</h2>
-                    </span>
+                    </div>
                   </a>
                 </li>
                 <li>
                   <a className="flex items-center">
-                    <img src={html} />
-                    <span>
+                    <div>
+                      <img src={html} className="w-[28px]" />
+                    </div>
+                    <div>
                       <h2>html</h2>
-                    </span>
+                    </div>
                   </a>
                 </li>
                 <li>
                   <a className="flex items-center">
-                    <img src={html} />
-                    <span>
+                    <div>
+                      <img src={html} className="w-[28px]" />
+                    </div>
+                    <div>
                       <h2>html</h2>
-                    </span>
+                    </div>
                   </a>
                 </li>
               </ul>
