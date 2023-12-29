@@ -7,6 +7,7 @@ body {
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-size: cover;
+  background-color: #f4f6fa;
 }
 
 @media (max-width: 768px) {
@@ -15,6 +16,7 @@ body {
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: cover;
+    background-color: #f4f6fa;
   }
 }
 
@@ -24,5 +26,6 @@ body {
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: cover;
+    background-color: #f4f6fa;
   }
 }
