@@ -1,5 +1,5 @@
 import Container from "./Container";
-import { FrontPage } from "./Frontpage";
+import { FrontPage } from "./pages/Frontpage";
 
 function App() {
   return (
