@@ -1,13 +1,11 @@
-import { ListItems } from "./ListItems";
-import { FrontPageWelcomeText } from "./FrontPageWelcomeText";
 import Container from "./Container";
+import { FrontPage } from "./Frontpage";
 
 function App() {
   return (
     <>
       <Container>
-        <FrontPageWelcomeText />
-        <ListItems />
+        <FrontPage />
       </Container>
     </>
   );
