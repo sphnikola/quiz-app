@@ -3,7 +3,7 @@ import { useState } from "react";
 import uuid from "react-uuid";
 
 export function Html() {
-  const [questionsLength, setQuestionsLength] = useState();
+  const [score, setScore] = useState(0);
   const [currentQuestion, setCurrentQuestion] = useState(1);
   const [choiceMade, setChoiceMade] = useState();
   const [changeText, setChangeText] = useState(false);
@@ -19,9 +19,10 @@ export function Html() {
 
   const handleClick = () => {
     setChangeText((current) => !current);
+    changeText && setCurrentQuestion(currentQuestion + 1);
     if (changeText) {
-      if (choiceMade === result[0].questions[currentQuestion].answer) {
-        console.log("correct");
+      if (choiceMade === result[0].questions[currentQuestion - 1].answer) {
+        setScore(score + 1);
       } else {
         console.log("wrong");
       }
@@ -29,9 +30,9 @@ export function Html() {
     if (currentQuestion === 10) {
       setnextscene(true);
     }
-
-    changeText && setCurrentQuestion(currentQuestion + 1);
+    // changeText && setCurrentQuestion(currentQuestion + 1);
   };
+  console.log(score);
 
   const listItems = result[0].questions[currentQuestion - 1].options.map(
     (item) => (
@@ -49,10 +50,9 @@ export function Html() {
   return (
     <>
       {changescene ? (
-        <h2>ok</h2>
+        <h2>you scored {score}</h2>
       ) : (
         <>
-          {" "}
           <section className="flex flex-col">
             <div className="flex flex-col-reverse">
               <h1 className=" text-[40px] leading-[40px] md:text-[64px] md:leading-[64px]   font-thin mb-8 md:mb-5 lg:mb-20">
@@ -78,6 +78,30 @@ export function Html() {
           </section>
         </>
       )}
+      {/* <section className="flex flex-col">
+        <div className="flex flex-col-reverse">
+          <h1 className=" text-[40px] leading-[40px] md:text-[64px] md:leading-[64px]   font-thin mb-8 md:mb-5 lg:mb-20">
+            {result[0].questions[currentQuestion - 1].question}
+          </h1>
+          <p className="text-[14px] leading-[21px] italic font-light mb-12 md:text-[20px] md:leading-[30px]">
+            Question {currentQuestion} of {result[0].questions.length}
+          </p>
+        </div>
+        <div>
+          <p>progress bar</p>
+        </div>
+      </section>
+      <section>
+        <ol type="A">{listItems}</ol>
+        <button
+          onClick={handleClick}
+          className=" w-full text-[18px] bg-violet-500 font-normal p-5 
+      rounded-xl md:text-[28px] md:leading-[34px]"
+        >
+          {changeText ? "next question" : "submit text"}
+        </button>
+      </section> */}
+
       {/* <section className="flex flex-col">
         <div className="flex flex-col-reverse">
           <h1 className=" text-[40px] leading-[40px] md:text-[64px] md:leading-[64px]   font-thin mb-8 md:mb-5 lg:mb-20">
