@@ -6,17 +6,9 @@ export function Html() {
   const [questionsLength, setQuestionsLength] = useState();
   const [currentQuestion, setCurrentQuestion] = useState(0);
   const [choiceMade, setChoiceMade] = useState();
-  const [selectColor, setSelectColor] = useState(false);
+  const [changeText, setChangeText] = useState(false);
+  // const [submitButtonText, setSubmitButtonText] = useState("Submit Text");
   const result = quiz.flatMap(({ quizzes }) => quizzes);
-  //console.log(result[0].questions.length);
-  //  console.log(result);
-  //console.log(result[0].questions[0].options);
-  // const choice = (e) => {
-  //   console.log(e.target.innerText);
-  //   if(e.target.innerText === result[0].questions[0].answer){
-
-  //   }
-  // };
 
   //gets the value of the selected answer
   const checkAnswer = (e) => {
@@ -24,13 +16,17 @@ export function Html() {
     const choice = e.target.innerText;
     setChoiceMade(choice);
   };
-  console.log(choiceMade);
 
-  //checks if selected answer is same as the provided answer in the json file
   const handleClick = () => {
-    if (choiceMade === result[0].questions[currentQuestion].answer) {
-      setCurrentQuestion(currentQuestion + 1);
+    setChangeText((current) => !current);
+    if (changeText) {
+      if (choiceMade === result[0].questions[currentQuestion].answer) {
+        console.log("correct");
+      } else {
+        console.log("wrong");
+      }
     }
+    changeText && setCurrentQuestion(currentQuestion + 1);
   };
 
   const listItems = result[0].questions[currentQuestion].options.map((item) => (
@@ -66,7 +62,7 @@ export function Html() {
           className=" w-full text-[18px] bg-violet-500 font-normal p-5 
           rounded-xl md:text-[28px] md:leading-[34px]"
         >
-          Submit Answer
+          {changeText ? "next question" : "submit text"}
         </button>
       </section>
     </>
