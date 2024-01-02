@@ -18,6 +18,7 @@ export function Html() {
   //   }
   // };
 
+  //gets the value of the selected answer
   const checkAnswer = (e) => {
     // console.log(e.target.innerText);
     const choice = e.target.innerText;
@@ -25,6 +26,7 @@ export function Html() {
   };
   console.log(choiceMade);
 
+  //checks if selected answer is same as the provided answer in the json file
   const handleClick = () => {
     if (choiceMade === result[0].questions[currentQuestion].answer) {
       setCurrentQuestion(currentQuestion + 1);
@@ -50,7 +52,7 @@ export function Html() {
             {result[0].questions[currentQuestion].question}
           </h1>
           <p className="text-[14px] leading-[21px] italic font-light mb-12 md:text-[20px] md:leading-[30px]">
-            pick a subject to get started!
+            Question {currentQuestion + 1} of {result[0].questions.length}
           </p>
         </div>
         <div>
