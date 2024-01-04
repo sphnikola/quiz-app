@@ -22,7 +22,7 @@ export function Html() {
   const handleClick = () => {
     setChangeText((current) => !current);
     changeText && setCurrentQuestion(currentQuestion + 1);
-    if (changeText) {
+    if (!changeText) {
       if (choiceMade === result[0].questions[currentQuestion - 1].answer) {
         setScore(score + 1);
       } else {
