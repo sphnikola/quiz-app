@@ -1,9 +1,11 @@
+import html_icon from "../assets/images/icon-html.svg";
+
 export const quiz = [
   {
     quizzes: [
       {
         title: "HTML",
-        icon: "./assets/images/icon-html.svg",
+        icon: { html_icon },
         color: "hsla(22, 100%, 96%, 1)",
         questions: [
           {
