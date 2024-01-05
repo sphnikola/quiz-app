@@ -34,7 +34,6 @@ export function JavaScript() {
       setnextscene(true);
     }
   };
-  console.log(score);
 
   const listItems = result[2].questions[currentQuestion - 1].options.map(
     (item) => (

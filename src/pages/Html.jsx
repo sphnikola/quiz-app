@@ -35,7 +35,6 @@ export function Html() {
       setnextscene(true);
     }
   };
-  console.log(score);
 
   const listItems = result[0].questions[currentQuestion - 1].options.map(
     (item) => (

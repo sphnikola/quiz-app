@@ -34,7 +34,6 @@ export function Accessibility() {
       setnextscene(true);
     }
   };
-  console.log(score);
 
   const listItems = result[3].questions[currentQuestion - 1].options.map(
     (item) => (
