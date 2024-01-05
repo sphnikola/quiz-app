@@ -22,14 +22,6 @@ function App() {
         </Container>
       </BrowserRouter>
     </>
-
-    // <>
-    //   <Container>
-    //     <FrontPage />
-
-    //     <Html />
-    //   </Container>
-    // </>
   );
 }
 
