@@ -4,7 +4,6 @@ import { useState } from "react";
 import uuid from "react-uuid";
 import { QuestionPage } from "../QuestionPage";
 import { OptionPage } from "../OptionPage";
-import { Link } from "react-router-dom";
 import { ScorePage } from "./ScorePage";
 
 export function Html() {
