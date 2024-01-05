@@ -82,7 +82,7 @@ export function Css() {
               className=" w-full text-[18px] bg-violet-500 font-normal p-5 
       rounded-xl md:text-[28px] md:leading-[34px]"
             >
-              play again
+              <Link to="/">play again</Link>
             </button>
           </section>
         </>

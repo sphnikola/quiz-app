@@ -4,6 +4,7 @@ import { useState } from "react";
 import uuid from "react-uuid";
 import { QuestionPage } from "../QuestionPage";
 import { OptionPage } from "../OptionPage";
+import { Link } from "react-router-dom";
 
 export function Html() {
   const [score, setScore] = useState(0);
@@ -82,7 +83,7 @@ export function Html() {
               className=" w-full text-[18px] bg-violet-500 font-normal p-5 
       rounded-xl md:text-[28px] md:leading-[34px]"
             >
-              play again
+              <Link to="/">play again</Link>
             </button>
           </section>
         </>

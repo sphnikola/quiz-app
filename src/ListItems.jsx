@@ -1,9 +1,11 @@
+import { Link, Outlet } from "react-router-dom";
 import { data } from "./data/data";
 
 export function ListItems() {
   const listItems = data.map((lit) => (
     <li key={lit.id} className="mb-5 ">
-      <a
+      <Link
+        to={lit.link}
         className="flex gap-x-3 items-center
            text-[18px] hover:text-[24px] hover:leading-[24px] hover:duration-500 hover:ease-in-out
            bg-link-bg  font-normal p-5  rounded-xl md:text-[28px] md:hover:text-[34px] md:leading-[34px]"
@@ -17,7 +19,7 @@ export function ListItems() {
         <div className="">
           <h2>{lit.title}</h2>
         </div>
-      </a>
+      </Link>
     </li>
   ));
   return (
@@ -25,6 +27,7 @@ export function ListItems() {
       <section>
         <ul className=" uppercase">{listItems}</ul>
       </section>
+      <Outlet />
     </>
   );
 }
