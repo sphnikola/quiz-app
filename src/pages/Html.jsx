@@ -4,7 +4,6 @@ import { useState } from "react";
 import uuid from "react-uuid";
 import { QuestionPage } from "../QuestionPage";
 import { OptionPage } from "../OptionPage";
-import { FrontPage } from "./Frontpage";
 
 export function Html() {
   const [score, setScore] = useState(0);

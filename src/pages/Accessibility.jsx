@@ -5,7 +5,7 @@ import uuid from "react-uuid";
 import { QuestionPage } from "../QuestionPage";
 import { OptionPage } from "../OptionPage";
 
-export function Html() {
+export function Accessibility() {
   const [score, setScore] = useState(0);
   const [currentQuestion, setCurrentQuestion] = useState(1);
   const [choiceMade, setChoiceMade] = useState();
