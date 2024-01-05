@@ -4,6 +4,7 @@ import { useState } from "react";
 import uuid from "react-uuid";
 import { QuestionPage } from "../QuestionPage";
 import { OptionPage } from "../OptionPage";
+import { Link } from "react-router-dom";
 
 export function JavaScript() {
   const [score, setScore] = useState(0);
