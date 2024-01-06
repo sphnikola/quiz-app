@@ -2,7 +2,7 @@ export function OptionPage(props) {
   return (
     <>
       <section>
-        <ol type="A" className="">
+        <ol type="A" className="w-full">
           {props.listItems}
         </ol>
         <button

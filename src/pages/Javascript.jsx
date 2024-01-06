@@ -13,6 +13,7 @@ export function JavaScript() {
   const [choiceMade, setChoiceMade] = useState();
   const [changeText, setChangeText] = useState(false);
   const [changescene, setnextscene] = useState(false);
+  const [progressBarWidth, setProgressBarWidth] = useState(10);
 
   const result = quiz.flatMap(({ quizzes }) => quizzes);
 
@@ -26,6 +27,10 @@ export function JavaScript() {
   const handleClick = () => {
     setChangeText((current) => !current);
     changeText && setCurrentQuestion(currentQuestion + 1);
+    if (changeText) {
+      setProgressBarWidth(progressBarWidth + 10);
+      progressBarWidth === 100 && setProgressBarWidth(10);
+    }
     if (!changeText) {
       if (choiceMade === result[2].questions[currentQuestion - 1].answer) {
         setScore(score + 1);
@@ -43,14 +48,18 @@ export function JavaScript() {
       <li key={uuid()} value={item} className="mb-5">
         <button
           onClick={checkAnswer}
-          className="flex gap-x-3  w-full items-center text-[18px] bg-link-bg
-        font-normal p-5  rounded-xl md:text-[28px]  md:leading-[34px]"
+          className="w-full text-left text-[18px] bg-link-bg
+        font-normal p-6  rounded-xl md:text-[28px]  md:leading-[34px]"
         >
           {item}
         </button>
       </li>
     )
   );
+  const progressBar = {
+    height: 20,
+    width: progressBarWidth.toString() + "%",
+  };
   return (
     <>
       {changescene ? (
@@ -61,6 +70,7 @@ export function JavaScript() {
             question={result[2].questions[currentQuestion - 1].question}
             currentQuestion={currentQuestion}
             totalQuestion={result[2].questions.length}
+            style={progressBar}
           />
           <OptionPage
             listItems={listItems}
