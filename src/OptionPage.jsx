@@ -2,7 +2,9 @@ export function OptionPage(props) {
   return (
     <>
       <section>
-        <ol type="A">{props.listItems}</ol>
+        <ol type="A" className="">
+          {props.listItems}
+        </ol>
         <button
           onClick={props.handleClick}
           className=" w-full text-[18px] bg-violet-500 font-normal p-5 

@@ -42,8 +42,8 @@ export function Html() {
       <li key={uuid()} value={item} className="mb-5">
         <button
           onClick={checkAnswer}
-          className="flex gap-x-3  w-full items-center text-[18px] bg-link-bg
-        font-normal p-5  rounded-xl md:text-[28px]  md:leading-[34px]"
+          className=" w-full text-[18px] bg-link-bg
+        font-normal p-5  rounded-xl md:text-[28px]  md:leading-[50%]"
         >
           {item}
         </button>
