@@ -2,7 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 
-body {
+/* body {
   background-image: url("./assets/images/pattern-background-tablet-light.svg");
   background-repeat: no-repeat;
   background-attachment: fixed;
@@ -28,4 +28,4 @@ body {
     background-size: cover;
     background-color: #f4f6fa;
   }
-}
+} */

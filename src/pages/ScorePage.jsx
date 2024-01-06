@@ -29,7 +29,7 @@ export function ScorePage(props) {
           </div>
         </div>
         <button
-          className=" w-full text-[18px] bg-violet-500 font-normal p-5 
+          className=" w-full text-[18px] bg-[#a729f5] font-normal p-5 
       rounded-xl md:text-[28px] md:leading-[34px]"
         >
           <Link to="/">play again</Link>

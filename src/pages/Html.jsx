@@ -47,7 +47,7 @@ export function Html() {
       <li key={uuid()} value={item} className="mb-5">
         <button
           onClick={checkAnswer}
-          className=" w-full text-left  text-[18px] bg-link-bg
+          className="dark:bg-[#3C4D68] w-full text-left  text-[18px] bg-link-bg
         font-normal p-6  rounded-xl md:text-[28px]  md:leading-[34px]"
         >
           {item}
@@ -56,7 +56,7 @@ export function Html() {
     )
   );
   const progressBar = {
-    height: 20,
+    height: 10,
     width: progressBarWidth.toString() + "%",
   };
   return (

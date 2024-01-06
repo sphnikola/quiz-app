@@ -6,10 +6,25 @@ import { Html } from "./pages/Html";
 import { Css } from "./pages/Css";
 import { JavaScript } from "./pages/Javascript";
 import { Accessibility } from "./pages/Accessibility";
+import { useState } from "react";
 
 function App() {
+  // const [isDark, setDark] = useState(false);
+  // const toggleDark = () => {
+  //   setDark(!isDark);
+  //   const html = document.getElementsByTagName("html")[0];
+  //   console.log(html);
+  //   html.classList.toggle("dark");
+  // };
+
   return (
     <>
+      {/* <span
+        id="darkmode"
+        className="w-5 h-5 bg-white block 
+    cursor-pointer"
+        onClick={toggleDark}
+      ></span> */}
       <BrowserRouter>
         <Container>
           <Routes>
