@@ -2,9 +2,12 @@ export function OptionPage(props) {
   return (
     <>
       <section className="dark:text-white">
-        <ol type="A" className="w-full">
-          {props.listItems}
-        </ol>
+        <div className="flex">
+          <ol type="A" className="w-full ">
+            {props.listItems}
+          </ol>
+          {props.image}
+        </div>
         <button
           onClick={props.handleClick}
           className=" w-full text-[18px] bg-[#a729f5] font-normal p-5 

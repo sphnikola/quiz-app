@@ -14,7 +14,6 @@ export function QuestionPage(props) {
           <div className="border-1 bg-link-bg rounded-xl max-w-full">
             <div className=" bg-[#a729f5] rounded-xl" style={props.style}></div>
           </div>
-          {/* <p className="">progress bar</p> */}
         </div>
       </section>
     </>

@@ -5,6 +5,7 @@ import uuid from "react-uuid";
 import { QuestionPage } from "../QuestionPage";
 import { OptionPage } from "../OptionPage";
 import { ScorePage } from "./ScorePage";
+import correct from "../assets/images/icon-correct.svg";
 
 export function Html() {
   const [score, setScore] = useState(0);
@@ -13,6 +14,7 @@ export function Html() {
   const [changeText, setChangeText] = useState(false);
   const [changescene, setnextscene] = useState(false);
   const [progressBarWidth, setProgressBarWidth] = useState(10);
+  const [showimage, setShowImage] = useState();
 
   const result = quiz.flatMap(({ quizzes }) => quizzes);
 
@@ -24,6 +26,9 @@ export function Html() {
   };
 
   const handleClick = () => {
+    choiceMade === result[0].questions[currentQuestion - 1].answer &&
+      setShowImage(true);
+    changeText && setShowImage(false);
     setChangeText((current) => !current);
     changeText && setCurrentQuestion(currentQuestion + 1);
     if (changeText) {
@@ -33,8 +38,10 @@ export function Html() {
     if (!changeText) {
       if (choiceMade === result[0].questions[currentQuestion - 1].answer) {
         setScore(score + 1);
+        setShowImage(true);
       } else {
         console.log("wrong");
+        setShowImage(false);
       }
     }
     if (currentQuestion === 10) {
@@ -44,10 +51,10 @@ export function Html() {
 
   const listItems = result[0].questions[currentQuestion - 1].options.map(
     (item) => (
-      <li key={uuid()} value={item} className="mb-5">
+      <li key={uuid()} value={item} className="mb-5 ">
         <button
           onClick={checkAnswer}
-          className="dark:bg-[#3C4D68] w-full text-left  text-[18px] bg-link-bg
+          className=" dark:bg-[#3C4D68] w-full text-left  text-[18px] bg-link-bg
         font-normal p-6  rounded-xl md:text-[28px]  md:leading-[34px]"
         >
           {item}
@@ -75,6 +82,7 @@ export function Html() {
             listItems={listItems}
             handleClick={handleClick}
             text={changeText ? "next question" : "submit text"}
+            image={showimage && <img src={correct} />}
           />
         </>
       )}
