@@ -4,7 +4,7 @@ export function ScorePage(props) {
   return (
     <>
       <section>
-        <h1 className=" text-[40px] leading-[40px] md:text-[64px] md:leading-[64px]   font-thin mb-8 md:mb-5 lg:mb-20">
+        <h1 className="dark:text-white text-[40px] leading-[40px] md:text-[64px] md:leading-[64px]   font-thin mb-8 md:mb-5 lg:mb-20">
           quiz completed
           <br /> <span className="font-medium">you scored...</span>{" "}
         </h1>
