@@ -15,7 +15,6 @@ export function Html() {
   const [changescene, setnextscene] = useState(false);
   const [progressBarWidth, setProgressBarWidth] = useState(10);
   const [showimage, setShowImage] = useState();
-  const [border, setBorder] = useState(false);
 
   const result = quiz.flatMap(({ quizzes }) => quizzes);
 
@@ -25,11 +24,6 @@ export function Html() {
     const choice = e.target.innerText;
     setChoiceMade(choice);
     setBorder(true);
-  };
-
-  const borderStyle = {
-    borderColor: "red",
-    borderStyle: "solid",
   };
 
   const handleClick = () => {
