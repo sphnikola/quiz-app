@@ -15,7 +15,7 @@ export default function Container({ children }) {
       >
         <div className="max-w-xl md:max-w-2xl lg:max-w-7xl mx-auto px-[24px] lg:px-[64px] ">
           <ToggleSwitch label="what" />
-          <main className="grid lg:grid-cols-[repeat(2,1fr)] items-start gap-x-11">
+          <main className="grid lg:grid-cols-[repeat(2,1fr)] items-start lg:gap-x-24">
             {children}
           </main>
         </div>
