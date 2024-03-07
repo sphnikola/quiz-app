@@ -9,7 +9,7 @@ export function QuestionPage(props) {
           <p className="dark:text-[#ADC2E1] text-[14px] leading-[21px] italic font-light mb-12 md:text-[20px] md:leading-[30px]">
             Question {props.currentQuestion} of {props.totalQuestion}
           </p>
-          <h2 className="capitalize pr-5 dark:text-white">
+          <h2 className="capitalize pr-5 dark:text-white text-blue-500">
             Just Click on the Answer you think is correct and submit
           </h2>
         </div>
